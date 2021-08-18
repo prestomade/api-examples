@@ -49,6 +49,17 @@ wp.hooks.addAction("presto.playerPlay", "my-plugin-namespace", (player) => {
   console.log({ player });
 });
 
+
+/**
+ * Sent when the media pauses
+ * (either for the first time, after having been paused, or after ending and then restarting).
+ */
+wp.hooks.addAction("presto.playerPause", "my-plugin-namespace", (player) => {
+  // this returns a plyr.io player object
+  console.log({ player });
+});
+
+
 /**
  * The time indicated by the element's currentTime attribute has changed.
  */
